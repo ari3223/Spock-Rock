@@ -25,7 +25,8 @@ function eventListener() {
          startBtn.addEventListener('click', StartGame); 
         })
     });
-
+    startBtn.addEventListener('touchstart', Reset);
+    startBtn.addEventListener('touchend', (e) => { restart.style.display = 'none' });
     startBtn.addEventListener('mousedown', Reset);
     startBtn.addEventListener('mouseup', (e) => { restart.style.display = 'none' });
     document.addEventListener('DOMContentLoaded', lc.WriteandShow());
